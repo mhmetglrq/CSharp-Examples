@@ -1,0 +1,40 @@
+﻿@model AdminMoviesViewModel
+
+<h1>Admin Movie List</h1>
+<table class="table table-dark table-striped table-bordered">
+    <thead>
+        <tr>
+            <th style="width:30px">#</th>
+            <th style="width:100px">Image</th>
+            <th >Title</th>
+            <th style="width:200px">Genres</th>
+            <th style="width:160px"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td>@movie.Id</td>
+                <td><img src="~/img/@movie.ImageUrl" alt="@movie.Title" width="80"/></td>
+                <td>@movie.Title</td>
+                <td>
+                    <ul>
+                        @foreach (var genre in movie.Genres)
+	                     {
+		                    <li>@genre.Name</li>
+	                     }
+                    </ul>
+                </td>
+                <td>
+                    <a href="/admin/movieupdate/@movie.Id" class="btn btn-primary btn-sm">Update</a>
+                    <form action="/admin/moviedelete" method="post" style="display:inline">
+                        <input type="hidden" name="Id" value="@movie.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

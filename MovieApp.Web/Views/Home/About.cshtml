@@ -1,0 +1,8 @@
+﻿@model List<Genre>
+    Home/About
+@section list{
+    @*@await Html.PartialAsync("_list",Model)
+    *@
+    @await Component.InvokeAsync("Genres")
+
+}

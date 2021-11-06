@@ -1,0 +1,85 @@
+﻿@*<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <a href="/" class="navbar-brand">MovieApp</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                    <a href="/movies/list" class="nav-link">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/moviecreate" class="nav-link"> Admin Create Movie</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/movielist" class="nav-link">Admin Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/genrelist" class="nav-link">Admin Genres</a>
+                </li>
+            </ul>
+            <form action="/movies/list" method="get" class="d-flex">
+                <input type="text" name="q" placeholder="Film Ara" class="form-control me-2"/>
+                <button type="submit" class="btn btn-outline-light mr-0">Bul</button>
+            </form>
+        </div>
+    </div>
+</nav>*@
+@*<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home/index">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/home/Index" >Home</a>
+                <a class="nav-link" href="/movies/list">list</a>
+                <a class="nav-link" href="/admin/moviecreate">create</a>
+                <a class="nav-link" href="/admin/movielist">movie</a>
+                <a class="nav-link" href="/admin/genrelist">genre</a>
+
+            </div>
+        </div>
+        <form action="/movies/list" method="get" class="d-flex">
+            <input class="form-control me-2" type="text" name="q" placeholder="Film Ara">
+            <button class="btn btn-outline-success" type="submit">Ara</button>
+        </form>
+    </div>
+</nav>*@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/home/index">Movie App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home/index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/movies/list">List</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="/admin/moviecreate">Admin Create</a></li>
+                        <li><a class="dropdown-item" href="/admin/movielist">Admin Movie List</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/admin/genrelist">Genre List</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <form action="/movies/list" method="get" class="d-flex">
+                <input class="form-control me-2" type="text" name="q" placeholder="Film Ara">
+                <button class="btn btn-outline-success" type="submit">Ara</button>
+            </form>
+        </div>
+    </div>
+</nav>

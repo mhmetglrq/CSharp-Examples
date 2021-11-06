@@ -1,0 +1,21 @@
+﻿@model Movie
+
+<div class="card">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="/img/@Model.ImageUrl" class="card-img" />
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Title</h5>
+                <p class="card-text">@Html.Raw(Model.Description)</p>
+
+            </div>
+        </div>
+        @*<div class="col-md-3">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zB4I68XVPzQ" width="480" height="458"></iframe>
+            </div>
+        </div>*@
+    </div>
+</div>

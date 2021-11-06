@@ -1,0 +1,8 @@
+﻿@model List<Genre>
+<div class="list-group list-group-flush">
+    @foreach (var genre in Model)
+    {
+        <a href="/movies/list/@genre.GenreId" class="list-group-item">@genre.Name</a>
+    }
+</div>
+
